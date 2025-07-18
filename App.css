@@ -1,0 +1,123 @@
+/* Base Setup */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Weather App Container */
+.weather-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  width: 360px;
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 1s ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.weather-container:hover {
+  transform: scale(1.02);
+}
+
+/* Heading */
+.weather-container h1 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Input Field */
+.weather-container input[type="text"] {
+  padding: 12px 16px;
+  width: 80%;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Button */
+.weather-container button {
+  padding: 12px 24px;
+  background: #ffffff;
+  color: #4b6cb7;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.weather-container button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Weather Details Card */
+.weather-details {
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 16px;
+  animation: slideIn 0.5s ease-out;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.weather-details h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.weather-details p {
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+  margin: 12px auto;
+}
+
+/* Error Message */
+.error {
+  margin-top: 15px;
+  color: #ffcccc;
+  font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
